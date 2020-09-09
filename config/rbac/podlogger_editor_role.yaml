@@ -1,0 +1,24 @@
+# permissions for end users to edit podloggers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: podlogger-editor-role
+rules:
+- apiGroups:
+  - logger.kyma-demo.io
+  resources:
+  - podloggers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - logger.kyma-demo.io
+  resources:
+  - podloggers/status
+  verbs:
+  - get

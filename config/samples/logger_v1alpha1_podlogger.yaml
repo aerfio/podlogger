@@ -1,0 +1,7 @@
+apiVersion: logger.kyma-demo.io/v1alpha1
+kind: PodLogger
+metadata:
+  name: podlogger-sample
+spec:
+  # Add fields here
+  foo: bar

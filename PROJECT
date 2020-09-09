@@ -1,0 +1,7 @@
+domain: kyma-demo.io
+repo: github.com/aerfio/podlogger
+resources:
+- group: logger
+  kind: PodLogger
+  version: v1alpha1
+version: "2"

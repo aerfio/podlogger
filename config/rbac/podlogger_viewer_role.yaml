@@ -1,0 +1,20 @@
+# permissions for end users to view podloggers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: podlogger-viewer-role
+rules:
+- apiGroups:
+  - logger.kyma-demo.io
+  resources:
+  - podloggers
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - logger.kyma-demo.io
+  resources:
+  - podloggers/status
+  verbs:
+  - get
